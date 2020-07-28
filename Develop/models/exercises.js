@@ -7,6 +7,10 @@ const exerciseSchema = new Schema({
         type: String,
         time: true,
         required: "Enter type of exercise"
+    },
+    weight: {
+        type: Number,
+        required: "Enter weight used"
     }
 
 })
