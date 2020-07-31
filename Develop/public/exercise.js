@@ -27,7 +27,6 @@ async function initExercise() {
   if (workout) {
     location.search = "?id=" + workout._id;
   }
-
 }
 
 initExercise();
@@ -141,11 +140,13 @@ if (workoutTypeSelect) {
   workoutTypeSelect.addEventListener("change", handleWorkoutTypeChange);
 }
 if (completeButton) {
-  completeButton.addEventListener("click", function (event) {
+  completeButton.addEventListener("click", function(event) {
     shouldNavigateAway = true;
     handleFormSubmit(event);
   });
 }
+
+// console.log(completeButton);
 if (addButton) {
   addButton.addEventListener("click", handleFormSubmit);
 }
