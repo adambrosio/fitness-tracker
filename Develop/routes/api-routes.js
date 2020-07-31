@@ -39,7 +39,7 @@ const Exercise = require("../models/exercises");
         .then((exerciseDB => {
             res.json.exerciseDB;
         })).catch(err => {
-            res.statusCode(400).json(err);
+            res.json(err);
         });
     });
 
