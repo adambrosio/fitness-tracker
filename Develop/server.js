@@ -1,8 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const db = require("./models/exercises");
+// const db = require("./models/exercises");
 const path = require("path");
-const app = express();
 
 const PORT = process.env.PORT || 3000
 

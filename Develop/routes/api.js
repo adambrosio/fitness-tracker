@@ -20,7 +20,7 @@ module.exports = function(app) {
         .catch(err => {
             res.statusCode(400).json(err);
         });
-    })
+    });
 
     app.put("/api/workouts/:id", (req, res) => {
         Exercise.findByIdAndUpdate(
@@ -33,24 +33,20 @@ module.exports = function(app) {
         ).then(exerciseDB => {
             res.json(exerciseDB);
         })
-        .catch( err => {
+        .catch(err => {
             res.statusCode(400).json(err);
-        })
-    })
+        });
+    });
 
-    app.post()
-
+    app.post("/api/workouts", ({ body }, res) => {
+        Exercise.create(body)
+        .then((exerciseDB => {
+            res.json.exerciseDB;
+        })).catch(err => {
+            res.statusCode(400).json(err);
+        });
+    });
 
 }
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router
