@@ -7,6 +7,7 @@ const exerciseSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    // getting information from seeds
     exercises: [
         {
             type: {
